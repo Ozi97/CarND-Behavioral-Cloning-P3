@@ -31,9 +31,9 @@ Ater having poor results with LeNet, I used the end to end model described by Nv
 
 I tranied my model on hpc cluster's front node. Training was alot faster than it was on my PC. But it would have been a lot faster, if I had access to its gpu as well.
 
-![Nvidia Architecture](https://devblogs.nvidia.com/parallelforall/wp-content/uploads/2016/08/cnn-architecture-624x890.png = 200x)
+![Nvidia Architecture](https://devblogs.nvidia.com/parallelforall/wp-content/uploads/2016/08/cnn-architecture-624x890.png = 200x200)
 
-I added exponential linear units to add non leniarlity and a dropout layer after convolution to prevent overfitting. beAdam optimizer and mean square error as the loss function was used.
+I added exponential linear units to add non leniarlity and a dropout layer after convolution to prevent overfitting. Adam optimizer and mean square error as the loss function was used.
 
 |Layer (type)   |
 |---|
@@ -60,7 +60,7 @@ I added exponential linear units to add non leniarlity and a dropout layer after
 
 # Testing
 
-I trained my model 20% of validation data and for 30 epochs, 25 epochs, 10 epochs, and 7 epochs. Having more than 10 did not make much of a diffirence.
+I trained my model using 20% of data for validation and for 30 epochs, 25 epochs, 10 epochs, and 7 epochs. Having more than 10 epochs did not make much of a diffirence.
 
 The training and validation loss was minimal.
 
