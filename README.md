@@ -12,7 +12,7 @@ The goals / steps of this project are the following:
 * Use the model to drive the vehicle autonomously around the first track in the simulator. The vehicle should remain on the road for an       entire loop around the track.
 * Summarize the results with a written report
 
-## 1. Data Recording and Augmentation
+# Data Recording and Augmentation
 
 Despite multiple attempts and laps of driving forwards and backwards using a keyboard; I was not able to train a good model. At best I could only reach the bridge. So I switched over to dataset provided by udacity.
 
