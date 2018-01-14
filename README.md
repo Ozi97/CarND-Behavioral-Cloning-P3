@@ -2,7 +2,7 @@
 
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-*The goal of this project was to drive a car autonomously on a simulated track using deep learning. Training data was collected from a human driving the simulator. Images and corresponding steering angles for every frame were colleted to generalized and predict steering angles for new frames. The model is validated on a new track*
+*The goal of this project was to drive a car autonomously on a simulated track using deep learning. Training data was collected from a human driving the simulator. Images and corresponding steering angles for every frame were colleted and generalized to predict steering angles for new frames. The model is validated on a new track*
 
 **Overview**
 ---
@@ -16,7 +16,7 @@ The goals / steps of this project are the following:
 
 Despite multiple attempts and laps of driving forwards and backwards using a keyboard; I was not able to train a good model. At best I could only reach the bridge. So I switched over to dataset provided by udacity.
 
-Along with the centre image, left and right camera images were utilized as well.This increased the amount of data. The steering output for left and right images had to be adjusted by a small angle to match the actual steering angle. The final model had an adjustment angle of 0.3.
+Along with the centre image, left and right camera images were utilized as well. This increased the amount of data. The steering output for left and right images had to be adjusted by a small angle to match the actual steering angle. The final model had an adjustment angle of 0.3.
 
 
 # Preprocessing
@@ -27,11 +27,11 @@ Frames were normalized using using keras's lambda layer to lower losses. Croppin
 
 # Model Architecture
 
-Ater having poor results with LeNet, I used the end to end model described by Nvidia in [this paper](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf = 500x). 
+Ater having poor results with LeNet, I used the end to end model described by Nvidia in [this paper](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf). 
 
 I tranied my model on hpc cluster's front node. Training was alot faster than it was on my PC. But it would have been a lot faster, if I had access to its gpu as well.
 
-![Nvidia Architecture](https://devblogs.nvidia.com/parallelforall/wp-content/uploads/2016/08/cnn-architecture-624x890.png)
+![Nvidia Architecture](https://devblogs.nvidia.com/parallelforall/wp-content/uploads/2016/08/cnn-architecture-624x890.png = 200x)
 
 I added exponential linear units to add non leniarlity and a dropout layer after convolution to prevent overfitting. beAdam optimizer and mean square error as the loss function was used.
 
