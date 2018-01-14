@@ -31,7 +31,7 @@ Ater having poor results with LeNet, I used the end to end model described by Nv
 
 I tranied my model on hpc cluster's front node. Training was alot faster than it was on my PC. But it would have been a lot faster, if I had access to its gpu as well.
 
-![Nvidia Architecture](https://devblogs.nvidia.com/parallelforall/wp-content/uploads/2016/08/cnn-architecture-624x890.png = 200x200)
+![Nvidia Architecture](https://devblogs.nvidia.com/parallelforall/wp-content/uploads/2016/08/cnn-architecture-624x890.png)
 
 I added exponential linear units to add non leniarlity and a dropout layer after convolution to prevent overfitting. Adam optimizer and mean square error as the loss function was used.
 
